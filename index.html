@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Irving Cupul,Joar Ruiz">
+    <meta name="keywords" content="Salon de arte e historia, Museo de Tizimin, Tizimin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Salon de arte e historia</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="headerMain__Contend container-xxl d-flex justify-content-between flex-nowrap text-black">
+            <div class="headerMain__ConBut">
+                <button class="headerMain__btn btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    aria-controls="offcanvas" id="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="25" class="headerMain__imgMenu"
+                        height="25" viewBox="0 0 13.229 13.229">
+                        <path d="M.415 6.595h12.499M.38 10.886h12.5M.38 2.408h12.5"
+                            style="opacity:.99;fill:#000000;fill-rule:evenodd;stroke:rgb(0, 0, 0);stroke-width:.72844;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke" />
+                    </svg>
+                </button>
+                <div class="headerMain__Titulo">
+                    <a href="#" class="headerMain__Link text-decoration-none" style="color: #000000;">
+                        <span class="titulo_header">Salon de arte e historia</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="headerMain__Search">
+                <a href="#" class="headerMain__Link--Search text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="headerMain__imgsearch" width="25" height="25"
+                        viewBox="0 0 512 512" style="fill: #000000">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <nav class="headerMain__Nav offcanvas offcanvas-start" data-bs-scroll="false" tabindex="-1" id="offcanvas"
+            aria-labelledby="offcanvas">
+
+            <div class="headerMain__headercanva offcanvas-header container d-flex justify-content-between">
+                <div class="headerMain__Contlogo">
+                    <img src="img/logo-canva-N-2.svg" alt="logo-insti" class="headerMain__logo">
+                </div>
+                <div class="headerMain__ContbtnClose">
+                    <button type="button" class="headerMain__btn--close btn" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 384 512"
+                            style="fill: #000000">
+                            <path
+                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="headerMain_canvasBody offcanvas-body">
+                <h5 class="headerMain_Secciones">Secciones</h5>
+                <ul class="navbar-nav">
+                    <!--Opciones de Visita-->
+                    <li class="nav-item dropdown align-items-center">
+                        <button type="button" class="btn btn-link nav-link dropdown-toggle esylea-black"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            <span class="opcion_pagina">Visita</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end border-0">
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="prepara tu visita"
+                                    href="#">Planea
+                                    tu
+                                    visita</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="visita en grupo"
+                                    href="#">Visita en
+                                    grupo</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion"
+                                    title="preguntas frecuentes" href="#">Preguntas
+                                    frecuentes</a></li>
+                        </ul>
+                    </li>
+                    <!--Opciones de salas-->
+                    <li class="nav-item dropdown align-items-center">
+                        <button type="button" class="btn btn-link nav-link dropdown-toggle esylea-black"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            <span class="opcion_pagina">Salas</span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end border-0">
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="Sala arte"
+                                    href="#">Arte</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="Sala prehispanica"
+                                    href="#">Prehispánica</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion"
+                                    title="Sala de diversos objetos I" href="#">Diversos objetos I</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion"
+                                    title="Sala de diversos objetos II" href="#">Diversos objetos II</a></li>
+                        </ul>
+                    </li>
+
+                    <!--Opcion de Eventos-->
+                    <li class="nav-item dropdown align-items-center">
+                        <a href="#" title="Eventos" class="esylea-black"><span class="opcion_pagina">Eventos</span></a>
+                    </li>
+
+                    <!--Opciones de Aprende-->
+                    <li class="nav-item dropdown align-items-center">
+                        <button type="button" class="btn btn-link nav-link dropdown-toggle esylea-black"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            <span class="opcion_pagina">Aprende</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end border-0">
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion"
+                                    title="Libros para investigacion" href="#">Libros para investigación</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="Publicaciones"
+                                    href="#">Publicaciones</a>
+                            </li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="Multimedia"
+                                    href="#">Multimedia</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Opciones de Sobre el museo-->
+                    <li class="nav-item dropdown align-items-center">
+                        <button type="button" class="btn btn-link nav-link dropdown-toggle esylea-black"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                            <span class="opcion_pagina">Sobre el museo</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end border-0">
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="historia del museo"
+                                    href="#">Historia del
+                                    museo</a></li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="Instalaciones"
+                                    href="#">Instalaciones</a>
+                            </li>
+                            <li class="dropdown-item"><a class="esylea-black opcion_seccion" title="Contacto"
+                                    href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" style="border-top: 1px solid rgba(170, 156, 156, 0.473) ;">
+                    <h5 class="">Idioma</h5>
+                    <li class="">
+                        <!--  <div id="google_element"></div>-->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="container-md container-xxl">
+            <div class="row-cols-1">
+                <div class="col-auto">
+                    <img src="Banner_oficial.jpg" alt="sala2" class="img-fluid" loading="eager">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 m-1 d-flex align-items-center">
+                    <div class="text-align-left align-self-center titulo-cuerpo">
+                        <h1 class="titulo_principal">
+                            MUSEO DE TIZIMIN
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 m-1 d-flex align-items-center">
+                    <a href="#" class="hbtn hb-border-bottom-br3 hbor2 hpad2 animate__animated animate__fadeInUp"
+                        title="planea tu visita">Planea tu visita</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <!--Seccion de las salas-->
+        <section class="seccion salas container-sm container-xxl">
+            <div class="nombreSeccion row textCenter">
+                <div class="col-12 colH2">
+                    <h2 class="h2">Salas</h2>
+                </div>
+            </div>
+
+            <!--Pimeras salas-->
+            <div class="row-sala row">
+                <!--Sala 1-->
+                <div class="sala col-lg-6 col-sm-12">
+                    <div class="salasCom">
+                        <a href="#" class="linkSala" title="sala1">
+                            <div class="content-img-Sala">
+                                <img src="img/Sala_1_Escala_900px.jpg" alt="sala1" class="imgSala" loading="lazy">
+                            </div>
+                            <div class="nomSala">
+                                <h4 class="nombreSala">Arte</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Sala 2-->
+                <div class="sala col-lg-6 col-sm-12">
+                    <div class="salasCom">
+                        <a href="#" class="linkSala" title="sala2">
+                            <div>
+                                <img src="img/Sala_2_Escala_900px.jpg" alt="sala2" class="imgSala" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Prehispánica</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Siguientes salas-->
+            <div class="row-sala row">
+                <!--Sala 3-->
+                <div class="sala col-lg-6 col-sm-12">
+                    <div class="salasCom">
+                        <a href="#" class="nombreSala" title="sala3">
+                            <div>
+                                <img src="img/Sala_3_Escala_900px.jpg" alt="sala2" class="imgSala3" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Diversos objetos I</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--Sala 4-->
+                <div class="sala col-lg-6 col-sm-12">
+                    <div class="salasCom">
+                        <a href="#" class="linkSala" title="sala4">
+                            <div>
+                                <img src="img/Sala_4_Escala_900px.jpg" alt="sala4" class="imgSala" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Diversos objetos II</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Seccion de eventos-->
+        <section class="seccion eventos container-sm container-xxl">
+            <div class="containerh2 row">
+                <h2 class="h2">Eventos</h2>
+            </div>
+            <div class="listaEventos row">
+
+            </div>
+        </section>
+
+        <section class="seccion opciones container-sm container-xxl">
+            <div class="row">
+                <div class="containerh2">
+                    <h2 class="h2">Te podria interesar</h2>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="opcion col-lg-4 col-sm-12">
+                    <h3 class="tituOpcion">Recursos multimedia</h3>
+                    <img src="#" alt="" class="opcion_Img">
+                </div>
+                <div class="opcion col-lg-4 col-sm-12">
+                    <a href=""></a>
+                    <h3 class="tituOpcion">Publicaciones</h3>
+                    <img src="#" alt="" class="opcion_Img">
+                </div>
+                <div class="opcion col-lg-4 col-sm-12">
+                    <h3 class="tituOpcion">Libros para investigación</h3>
+                    <img src="#" alt="" class="opcion_Img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--Comienza el footer-->
+    <footer class="footer">
+        <div class="container-sm">
+            <!--Principal footer-->
+            <div class="row justify-content-between">
+                <div class=" col-lg-5 col-sm-12">
+                    <div class="titulos">
+                        <h4 class="h4" translate="no">MUSEO DE TIZIMIN</h4>
+                        <h4 class="h4" translate="no">SALON DE ARTE E HISTORIA</h4>
+                    </div>
+                    <div class="container-img-inf">
+                        <img src="img/logo-inferior-V-N.svg" width="70%" alt="Logo_inf">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12">
+                    <div class="box">
+                        <h5>Horario</h5>
+                        <div>
+                            <p>Lunes a viernes:<br>
+                                <time>08:00</time> a.m. a <time>01:00</time>p.m.<br>
+                                <time>05:00 </time> p.m. a <time>07:00 </time>p.m.
+                            </p>
+                        </div>
+                        <div>
+                        </div>
+                        <p> Sabado: <br>
+                            <time> 08:00</time> a.m. a <time> 01:00</time> p.m.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <div class="box">
+                        <h5>Información</h5>
+                        <div>
+                            <address>C. 50 entre 51, 49 y 47 Col. Centro, 97700, Tizimín, Yucatán</address>
+                            <p>Télefono: +52 (986) 866 7014</p>
+                        </div>
+                        <div class="red-social d-flex justify-content-start">
+                            <a href="#"><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Mas opciones-->
+            <div class="row">
+                <hr>
+                <ul class="masinfo row">
+                    <li class="enlace col-lg-2 col-sm-12"><a href="#" class="esylea-black">Contacto</a></li>
+                    <li class="enlace col-lg-2 col-sm-12"><a href="#" class="esylea-black">Acerca de nosotros</a></li>
+                    <li class="enlace col-lg-3 col-sm-12 "><a href="#" class="esylea-black">Terminos y condiciones</a>
+                    </li>
+                    <li class="enlace col-lg-2 col-sm-12"><a href="#" class="esylea-black">Preguntas frecuentes</a>
+                    </li>
+                    <li class="enlace col-lg-2 col-sm-12 "><a href="#" class="esylea-black">Créditos</a></li>
+                </ul>
+            </div>
+
+            <!--Derechos-->
+            <div class="row">
+                <hr>
+                <div class="col d-flex justify-content-center text-align-center">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                        Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                            style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<!--d-none d-md-block ,animacion aparecer-izquierda-->

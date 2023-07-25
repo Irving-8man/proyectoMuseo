@@ -1,0 +1,1621 @@
+/*Pantallas medianas*/
+@media (max-width: 767px) {
+
+    header {
+        width: 100vw;
+        height: 69px;
+    }
+
+
+    #icono-menu {
+        height: 25px;
+        width: auto;
+    }
+
+    #logo-principal {
+        height: 67px;
+        width: auto;
+    }
+
+    #icono-tapir {
+        height: 67px;
+        width: auto;
+    }
+
+}
+
+
+
+                <div class="img-header d-flex ">
+                    <input type="search" class="form-control" placeholder="Buscar" id="searchInput1">
+                    <ul id="suggestionsList1" class="suggestions-list text-start"></ul>
+                    <!-- Lista de resulatados -->
+                    <ul id="resultsList" class="d-none">
+                        <li data-href="Ejemplo.html">Ejemplo 1</li>
+                        <li data-href="pagina2.html">Busqueda</li>
+                        <li data-href="pagina3.html">Ejemplo 3</li>
+                    </ul>
+                </div>
+
+
+                    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var texto = "Bienvenido";
+            var index = 0;
+            var textoAnimado = document.getElementById("textoAnimado");
+
+            function escribirTexto() {
+                if (index < texto.length) {
+                    textoAnimado.innerHTML += texto.charAt(index);
+                    index++;
+                    setTimeout(escribirTexto, 99); // Velocidad de escritura (100 milisegundos)
+                }
+            }
+
+            escribirTexto();
+        });
+    </script>
+
+
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var frases = ["Bienvenido", "Observa, pregunta y aprende",];
+            var fraseIndex = 0;
+
+            function escribirFrase() {
+                var fraseActual = frases[fraseIndex];
+                var elementoActual = fraseIndex % 2 === 0 ? "frase1" : "frase2";
+
+                var elemento = document.getElementById(elementoActual);
+                var index = 0;
+
+                function escribirCaracter() {
+                    if (index < fraseActual.length) {
+                        elemento.innerHTML += fraseActual.charAt(index);
+                        index++;
+                        setTimeout(escribirCaracter, 100); // Velocidad de escritura (100 milisegundos)
+                    } else {
+                        fraseIndex++;
+                        setTimeout(escribirFrase, 2000); // Tiempo de espera antes de comenzar la siguiente frase (2000 milisegundos = 2 segundos)
+                    }
+                }
+
+                escribirCaracter();
+            }
+
+            escribirFrase();
+        });
+
+    </script>
+
+
+
+    
+    <div>
+        <section style="background-color: rgb(0, 0, 0);height: 550px; margin-top: 21px;">
+            <div class="container d-flex justify-content-between">
+
+                <div class="container-xxl" style="margin-top: 200px;">
+                    <h1 id="textoAnimado"
+                        style="color: white; font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif; font-size: 70px;">
+                    </h1>
+                </div>
+
+                <div class="container-xxl p-1" style="margin-top: 10px;">
+                    <img src="img/fachada_nueva.jpg" alt="fachada" class="img-fluid" style="motion-rotation: auto;" >
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+        <footer class="pie-pagina" style="margin-top: 300px;font-size: 16px; background-color: white;">
+        <hr>
+        <div class="grupo-1 container-xxl d-flex justify-content-between">
+            <div class="box">
+                <h3 translate="no">MUSEO DE TIZIMIN<br>
+                    SALON DE ARTE E HISTORIA</h3>
+                <figure>
+                    <a href="">
+                        <img src="img/logo-inferior.svg" alt="Logo_inf">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <p>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</p>
+                <p>Télefono: +52 (986) 866 7014</p>
+                <p>Horario:</p>
+                <p>Lunes a viernes: 08:00 a.m. a 01:00 p.m. <br> 05:00 p.m. a 07:00 p.m. <br>Sabado: 08:00 a.m. a 01:00
+                    p.m.</p>
+            </div>
+            <div class="box">
+                <p>Contacto<br>Acerca de nosotros<br>Terminos y condiciones<br>Preguntas
+                    frecuentes<br>Créditos</p><br>
+                <p>Nuestras redes sociales</p>
+                <div class="red-social">
+                    <a href=""><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a><br />Esta obra está bajo una
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                    style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+        </div>
+    </footer>
+
+
+    .pie-pagina {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 20px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h3 {
+    color: #000000;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    transition: all 300ms ease;
+    color: rgb(25, 10, 92);
+}
+
+.pie-pagina .grupo-2 {
+
+    background-color: #080808;
+    padding: 1px 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+    <footer class="pie-pagina" style="font-size: 16px; background-color: white;">
+        <hr>
+        <div class="grupo-1 container-xxl d-flex justify-content-between">
+            <div class="box">
+                <h3 translate="no">MUSEO DE TIZIMIN<br>
+                    SALON DE ARTE E HISTORIA</h3>
+                <figure>
+                    <a href="">
+                        <img src="img/logo-inferior.svg" alt="Logo_inf">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <p>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</p>
+                <p>Télefono: +52 (986) 866 7014</p>
+                <p>Horario:</p>
+                <p>Lunes a viernes: 08:00 a.m. a 01:00 p.m. <br> 05:00 p.m. a 07:00 p.m. <br>Sabado: 08:00 a.m. a 01:00
+                    p.m.</p>
+            </div>
+            <div class="box">
+                <p>Contacto<br>Acerca de nosotros<br>Terminos y condiciones<br>Preguntas
+                    frecuentes<br>Créditos</p><br>
+                <p>Nuestras redes sociales</p>
+                <div class="red-social">
+                    <a href=""><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a><br />Esta obra está bajo una
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                    style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <div class="container-xxl cont-img"></div>
+    
+        .cont-img {
+            background-image: url('/img/sala2_nuevo_ups.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 0;
+            padding-top: calc(386 / 1440 * 100%);
+            /* Calcula la proporción de altura en relación con el ancho de la imagen */
+        }
+
+        /* Aplica estilos adicionales para diferentes tamaños de pantalla utilizando media queries */
+        @media (max-width: 768px) {
+            .image-container {
+                /* Estilos específicos para pantallas más pequeñas */
+            }
+        }
+
+
+
+
+    <footer class="secondary-text">
+        <div class="container">
+            <div class="row g-0">
+
+                <div class="col-lg-10 offset-lg-1">
+                    
+                    <div class="region region-footer">
+
+                        <div class="context-groups context-groups-footer_row row">
+                            <div class="context-groups context-groups-footer_column_1 col-lg-3 hidden-print space-after-lg">
+                                <div id="block-block-content-e76b6a9d-75fd-4744-a399-7c3dcf37971e"
+                                    class="block block-block-content block-block-contente76b6a9d-75fd-4744-a399-7c3dcf37971e">
+
+                                    <h2>Visit Us</h2>
+
+
+                                    <div
+                                        class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                        <p><a
+                                                href="https://www.google.com/maps/place/Museum+of+Fine+Arts,+Boston/@42.3391059,-71.0938552,16z/data=!4m2!3m1!1s0x89e37a0de7e77a4b:0x2f033fd6c495d564">465
+                                                Huntington Avenue<br>
+                                                Boston, Massachusetts 02115</a></p>
+
+                                        <p><a href="tel:617-267-9300">617-267-9300</a></p>
+
+                                        <p><a class="action" href="/visit">Plan Your Visit</a></p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="context-groups context-groups-footer_column_2 col-lg-3 hidden-print space-after-lg">
+                                <div id="block-block-content-58c98581-014d-403b-b9a0-c66de6f58ae4"
+                                    class="block block-block-content block-block-content58c98581-014d-403b-b9a0-c66de6f58ae4">
+
+                                    <h2>Connect with Us</h2>
+
+
+                                    <div
+                                        class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                        <ul class="link-list" id="social">
+                                            <li><a class="facebook" href="https://www.facebook.com/mfaboston"
+                                                    target="_blank">Facebook </a></li>
+                                            <li><a class="twitter" href="https://twitter.com/mfaboston"
+                                                    target="_blank">Twitter </a></li>
+                                            <li><a class="instagram" href="https://www.instagram.com/mfaboston/"
+                                                    target="_blank">Instagram </a></li>
+                                            <li><a class="youtube" href="https://www.youtube.com/mfaboston"
+                                                    target="_blank">Youtube </a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="context-groups context-groups-footer_column_3 col-lg-3 hidden-print space-after-lg">
+                                <div id="block-block-content-38efd79a-26eb-42dd-ab11-649d49c9ce45"
+                                    class="block block-block-content block-block-content38efd79a-26eb-42dd-ab11-649d49c9ce45">
+
+                                    <h2>Sign up for MFA Mail</h2>
+
+
+                                    <div
+                                        class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                        <p>Get updates on what’s happening at the MFA, from exhibitions and programs to
+                                            special events and more.</p>
+
+                                        <p><a class="action" href="//tnew.mfa.org/account/create/brief">Sign Up</a></p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div
+                                class="context-groups context-groups-footer_column_4 col-lg-3 hidden-print space-after-lg">
+                                <nav aria-labelledby="block-menu-block-footer-menu"
+                                    class="link-list hidden-print block block-menu navigation menu--footer"
+                                    id="block-menu-block-footer">
+
+                                    <h5 class="visually-hidden" id="block-menu-block-footer-menu">Footer</h5>
+
+
+
+
+                                    <ul class="menu">
+                                        <li class="menu-item menu-item--collapsed">
+                                            <a href="/about" data-drupal-link-system-path="node/1789">About</a>
+                                        </li>
+                                        <li class="menu-item menu-item--collapsed">
+                                            <a href="/working-at-the-mfa"
+                                                data-drupal-link-system-path="node/1752">Working at the MFA</a>
+                                        </li>
+                                        <li class="menu-item menu-item--collapsed">
+                                            <a href="/news" data-drupal-link-system-path="node/1803">Press</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="/annual-report" data-drupal-link-system-path="node/1751">Annual
+                                                Report</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="/about/contact-us"
+                                                data-drupal-link-system-path="node/24140">Contact</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="/privacy" data-drupal-link-system-path="node/1754">Privacy
+                                                Policy</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="/about/terms-of-use" data-drupal-link-system-path="node/1814">Terms
+                                                of Use</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="/visit/accessibility"
+                                                data-drupal-link-system-path="node/1732">Accessibility</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a
+                                                href="https://translate.google.com/translate?js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=2&amp;eotf=1&amp;sl=auto&amp;tl=fr&amp;u=www.mfa.org">Translate</a>
+                                        </li>
+                                    </ul>
+
+
+                                </nav>
+                                <div id="block-block-content-876e76e4-1c32-49d1-99c7-04347cd0b1ed"
+                                    class="block block-block-content block-block-content876e76e4-1c32-49d1-99c7-04347cd0b1ed">
+
+
+
+                                    <div
+                                        class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                        <p class="sitename">© 2023 Museum of Fine Arts Boston</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+                <p class="h7">Horario:</p>
+                <p><strong>Lunes a viernes:</strong> <br> 08:00 a.m. a 01:00 p.m. <br> 05:00 p.m. a 07:00 p.m. <br>
+                    <strong>Sabado:</strong><br> 08:00 a.m. a 01:00
+                    p.m.
+                </p>
+
+                                <p class="h7">Acerca de nosotros</p>
+                <ul>
+                    <li>
+                        <span>Contacto</span>
+                    </li>
+                    <li>
+                        <span>Acerca de nosotros</span>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+
+
+
+    <footer class="container-fluid" style="border-top:.1px solid black; margin-top: .4rem;" id="footer_main">
+
+        <div class="row p-4 g-0 ">
+
+            <section class="col" style="border: 1px solid black;">
+                <p translate="no">MUSEO DE TIZIMIN<br>
+                    SALON DE ARTE E HISTORIA</p>
+                <img src="" alt="Logo_inf" class="img-fluid">
+                <address>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</address>
+            </section>
+
+            <section class="col" style="border: 1px solid black;">
+
+            </section>
+
+            <section class="col" style="border: 1px solid black;">
+
+            </section>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var texto = "Bienvenido";
+            var index = 0;
+            var textoAnimado = document.getElementById("textoAnimado");
+            function escribirTexto() {
+                if (index < texto.length) {
+                    textoAnimado.innerHTML += texto.charAt(index);
+                    index++;
+                    setTimeout(escribirTexto, 130); // Velocidad de escritura (100 milisegundos)
+                }
+            }
+            escribirTexto();
+        });
+    </script>
+    <script>
+        var titles = document.querySelectorAll('.scroll-effect');
+
+        var observerOptions = {
+            rootMargin: '0px',
+            threshold: 0.5 // Porcentaje de visibilidad requerido para que se active el cambio
+        };
+
+        var observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, observerOptions);
+
+        titles.forEach(function (title) {
+            observer.observe(title);
+        });
+    </script>
+
+
+
+
+                        <div class="headerMain__ContSear input-group">
+                        <span class="headerMain__Icon input-group-text"><i class="fas fa-search"></i></span>
+                        <input class="headerMain__search form-control" type="search" placeholder="Buscar"
+                            id="searchInput1">
+                        <ul class="headerMain__listResult suggestions-list text-start" id="suggestionsList1"></ul>
+                    </div>
+
+
+
+
+                        <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement('google_element');
+        }
+    </script>
+
+
+
+
+
+    *Para los pequeños logos*
+    <img src="img/salas.svg" alt="icon-sala" class="img_MD">
+
+
+
+
+
+
+
+    /*animacioneses*/
+    
+.animate-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: revealLeft 2s forwards;
+}
+
+
+@keyframes revealLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.animacion {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.animacion.aparecer-izquierda {
+    transform: translateX(-100%);
+    transition: transform 1.8s ease;
+}
+
+.animacion.aparecer-derecha {
+    transform: translateX(100%);
+    transition: transform 1.8s ease;
+}
+
+.animacion.aparecer {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 767px) {}
+
+
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 500px) {
+
+    .animacion.aparecer-derecha {
+        transform: translateY(100%);
+        transition: transform .7s ease;
+    }
+
+    .animacion.aparecer {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+carruse
+
+
+                <div id="carouselExampleInterval" class="carousel slide carousel-fade carousel-dark"
+                    data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div>
+                                <img src="img/IMG_20230703_173042.jpg" class="d-block w-80" alt="sala1">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="img/IMG_20230703_181059_E.jpg" class="d-block w-80" alt="sala2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/IMG_20230703_181342_E.jpg" class="d-block w-80" alt="sala3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/IMG_20230703_181810_E.jpg" class="d-block w-80" alt="sala4">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+
+
+
+                    <ul id="resultsList" class="d-none">
+        <li data-href="Ejemplo.html">Ejemplo 1</li>
+        <li data-href="pagina2.html">Busqueda</li>
+        <li data-href="pagina3.html">Ejemplo 3</li>
+    </ul>
+
+
+
+
+
+                    <div class="msg-bienvenida d-flex justify-content-center align-content-center">
+                        <div class="band-container">
+                            <div class="band-content-right">
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                                <span class="band-text"> <strong>Bienvenido</strong> </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                        <div class="msg-bienvenida d-flex justify-content-center align-content-center">
+                        <div class="band-container">
+                            <div class="band-content-lefth">
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                                <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                                        <strong>Prepara tu visita</strong></a></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    img,
+video,
+frame {
+    max-inline-size:100%;
+    block-size: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+
+    <footer class="footer" style="background-color:aqua;">
+        <div class="grupo-1">
+
+            <div class="row">
+                <div style="background-color: #4D4D4D; min-height: 7.5rem;">
+                    <p style="font-size: 50px; font-family: var(--tipo-titulos); padding: 0;">Mira, pregunta y aprende
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="titulos">
+                        <h3 translate="no">MUSEO DE TIZIMIN</h3>
+                        <h3 translate="no">SALON DE ARTE E HISTORIA</h3>
+                    </div>
+                    <div>
+                        <img src="img/logo-inferior-V-B.svg" alt="Logo_inf">
+                    </div>
+                    <div>
+                        <p>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</p>
+                        <p>Télefono: +52 (986) 866 7014</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <p>Horario:</p>
+                        <p>Lunes a viernes: 08:00 a.m. a 01:00 p.m. <br> 05:00 p.m. a 07:00 p.m. <br>Sabado: 08:00 a.m.
+                            a 01:00
+                            p.m.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <p>Nuestras redes sociales</p>
+                        <div class="red-social">
+                            <a href=""><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p>Contacto<br>Acerca de nosotros<br>Terminos y condiciones<br>Preguntas
+                    frecuentes<br>Créditos</p><br>
+            </div>
+            <div class="row d-flex flex-row justify-content-center">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                    Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                        style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+            <div class="heroContend">
+                <div class="hero">
+                    <div class="row">
+                        <div class="contImagen col">
+                            <img src="" alt="sala2" class="img_banner custom-shape-image" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <main>
+        <div class="main">
+            <hr>
+
+            <div class="salasContend">
+                <section class="container main__salas overflow-hidden">
+                    <div class="nombreSeccion">
+                        <h2 class="h2Salas">Salas</h2>
+                    </div>
+                    <div class="container salas">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="#" class="linkSala" title="sala1">
+                                    <div>
+                                        <img src="" alt="sala1" class="imgSala" loading="lazy">
+                                    </div>
+                                    <div class="nomSala">
+                                        <h4 class="nombreSala">Sala principal</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="#" class="linkSala" title="sala2">
+                                    <div>
+                                        <img src="" alt="sala2" class="imgSala" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <h4 class="nombreSala">Sala prehispanica</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="sala col-lg-6">
+
+                                <a href="#" class="nombreSala" title="sala3">
+                                    <div>
+                                        <img src="" alt="sala2" class="imgSala3" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <h4 class="nombreSala">Sala de diversos objetos I</h4>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="sala col-lg-6">
+                                <a href="#" class="linkSala" title="sala4">
+                                    <div>
+                                        <img src="" alt="sala4" class="imgSala" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <h4 class="nombreSala">Sala de diversos objetos II</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="eventosContend seccion">
+                <hr>
+                <section class=" seccion main__eventos">
+                    <div class="">
+                        <h2 class="hr2">Eventos</h2>
+                    </div>
+                </section>
+            </div>
+
+            <div class="opcionesContend seccion ">
+                <hr>
+                <section class=" seccion main__opciones">
+                    <h3 class="h3r">Te podria interesar</h3>
+                    <div class="opciones_mas">
+                        <div class="opcion">
+                            <h3 class="tituOpcion">Recursos multimedia</h3>
+                            <img src="#" alt="" class="opcion_Img">
+                        </div>
+                        <div class="opcion">
+                            <h3 class="tituOpcion">Publicaciones</h3>
+                            <img src="#" alt="" class="opcion_Img">
+                        </div>
+                        <div class="opcion">
+                            <h3 class="tituOpcion">Libros para investigación</h3>
+                            <img src="#" alt="" class="opcion_Img">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+<!--d-none d-md-block ,animacion aparecer-izquierda-->
+
+
+
+
+    <div class="container-xl">
+        <div class="msg-bienvenida d-flex justify-content-center align-content-center">
+            <div class="band-container">
+                <div class="band-content-lefth">
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                    <span class="band-text"><a href="#" title="planea" class="link esylea-black">
+                            <strong>Prepara tu visita</strong></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="sal">
+            <section class="salasContend container-sm container-xxl">
+                <div class="nombreSeccion row">
+                    <h2 class="h2Salas">Salas</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 sala">
+                        <div class="salasCom">
+                            <a href="#" class="linkSala" title="sala1">
+                                <div>
+                                    <img src="" alt="sala1" class="imgSala" loading="lazy">
+                                </div>
+                                <div class="nomSala">
+                                    <h4 class="nombreSala">Sala de arte</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 sala">
+                        <a href="#" class="linkSala" title="sala2">
+                            <div>
+                                <img src="" alt="sala2" class="imgSala" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Sala prehispanica</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sala col-lg-6 sala">
+
+                        <a href="#" class="nombreSala" title="sala3">
+                            <div>
+                                <img src="" alt="sala2" class="imgSala3" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Sala de diversos objetos I</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sala col-lg-6 sala">
+                        <a href="#" class="linkSala" title="sala4">
+                            <div>
+                                <img src="" alt="sala4" class="imgSala" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Sala de diversos objetos II</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="eventosContend container-sm container-xxl">
+            <section class=" seccion main__eventos">
+                <div class="">
+                    <h2 class="hr2">Eventos</h2>
+                </div>
+            </section>
+        </div>
+        <div class="opcionesContend container-sm container-xxl">
+            <section class="Container seccion main__opciones">
+                <div class="row">
+                    <h2 class="h3r">Te podria interesar</h2>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="opcion col-auto">
+                        <h3 class="tituOpcion">Recursos multimedia</h3>
+                        <img src="#" alt="" class="opcion_Img">
+                    </div>
+                    <div class="opcion col-auto">
+                        <h3 class="tituOpcion">Publicaciones</h3>
+                        <img src="#" alt="" class="opcion_Img">
+                    </div>
+                    <div class="opcion col-auto">
+                        <h3 class="tituOpcion">Libros para investigación</h3>
+                        <img src="#" alt="" class="opcion_Img">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+    <footer class="footer">
+        <div class="container container-sm">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <div class="titulos" style="text-align: center;">
+                        <h3 translate="no">MUSEO DE TIZIMIN</h3>
+                        <h3 translate="no">SALON DE ARTE E HISTORIA</h3>
+                    </div>
+                    <div>
+                        <img src="img/logo-inferior-V-B.svg" width="70%" alt="Logo_inf">
+                    </div>
+                    <div class="red-social">
+                        <a href=""><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="box">
+                        <h5>Horario</h5>
+                        <div>
+                            <p>Lunes a viernes:<br>
+                                <time>08:00</time> a.m. a <time>01:00</time>p.m.<br>
+                                <time>05:00 </time> p.m. a <time>07:00 </time>p.m.
+                            </p>
+                        </div>
+                        <div>
+
+                        </div>
+                        <p> Sabado: <br>
+                            <time> 08:00</time> a.m. a <time> 01:00</time> p.m.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="box">
+                        <h5>Información</h5>
+                        <div>
+                            <address>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</address>
+                            <p>Télefono: +52 (986) 866 7014</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <hr>
+                <div class="container container-sm">
+                    <ul class="masinfo row justify-content-between">
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Contacto</a></li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Acerca de nosotros</a>
+                        </li>
+                        <li class="enlace col-sm-13 col-md-3"><a href="#" class="esylea-white">Terminos y
+                                condiciones</a></li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Preguntas frecuentes</a>
+                        </li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr>
+                <div class="col d-flex justify-content-center text-align-center">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                        Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                            style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+                <div class="lema">
+            <div class="container container-sm">
+                <p style=" font-family: var(--tipo-titulos); padding: 0; font-size: 2.5rem;">Mira, pregunta y aprende
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+            .masinfo {
+        text-align: start;
+        justify-content: start;
+    }
+
+
+        <div class="container" style="background-color: aquamarine;">
+        <div class="row p-5">
+            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                <div class="text-align-left align-self-center">
+                    <h1 class="h1">
+                        MUSEO DE TIZIMIN
+                    </h1>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <img src="img/Banner_version_1_1400px.jpg" alt="Banner" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div
+        style="background-image: url(img/Banner_version_1_1400px.jpg); position: relative;background-position: left;
+    background-size: 100%;background-size: cover;background-repeat: no-repeat;padding:160px 0; max-inline-size: 100%; display: flex; flex-direction: row; justify-content: start; justify-items: start;background-clip: padding-box; ">
+        
+        <div style=" padding:  auto 0; position: relative;" class="container">
+            <h1
+                style="font-size: 2.5rem; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: aliceblue;font-style: unset;">
+                MUSEO DE TIZIMIN
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="sal" style="margin-top: 250px;">
+        <section class="salasContend container">
+            <div class="nombreSeccion row">
+                <h2 class="h2Salas">Salas</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 sala">
+                    <div class="salasCom">
+                        <a href="#" class="linkSala" title="sala1">
+                            <div>
+                                <img src="img/Sala_1_Escala_1000px.jpg" alt="sala1" class="imgSala" loading="lazy">
+                            </div>
+                            <div class="nomSala">
+                                <h4 class="nombreSala">Sala de arte</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 sala">
+                    <div class="salasCom">
+                        <a href="#" class="linkSala" title="sala2">
+                            <div>
+                                <img src="img/Sala_2_Escala_1000px.jpg" alt="sala2" class="imgSala" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Sala prehispanica</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="sala col-lg-6 sala">
+                    <div class="salasCom">
+                        <a href="#" class="nombreSala" title="sala3">
+                            <div>
+                                <img src="img/Sala_3_Escala_1000px.jpg" alt="sala2" class="imgSala3" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Sala de diversos objetos I</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="sala col-lg-6 sala">
+                    <div class="salasCom">
+                        <a href="#" class="linkSala" title="sala4">
+                            <div>
+                                <img src="img/Sala_4_Escala_1000px.jpg" alt="sala4" class="imgSala" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="nombreSala">Sala de diversos objetos II</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="eventosContend container-sm container-xxl">
+        <section class=" seccion main__eventos">
+            <div class="">
+                <h2 class="hr2">Eventos</h2>
+            </div>
+        </section>
+    </div>
+    
+    <div class="opcionesContend container-sm container-xxl">
+        <section class="Container seccion main__opciones">
+            <div class="row">
+                <h2 class="h3r">Te podria interesar</h2>
+            </div>
+            <div class="row justify-content-between">
+                <div class="opcion col-auto">
+                    <h3 class="tituOpcion">Recursos multimedia</h3>
+                    <img src="#" alt="" class="opcion_Img">
+                </div>
+                <div class="opcion col-auto">
+                    <h3 class="tituOpcion">Publicaciones</h3>
+                    <img src="#" alt="" class="opcion_Img">
+                </div>
+                <div class="opcion col-auto">
+                    <h3 class="tituOpcion">Libros para investigación</h3>
+                    <img src="#" alt="" class="opcion_Img">
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+        <!--Seccion hero-->
+    <div class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <h1 class="animate__animated animate__fadeInLeft titulo_principal">
+                        MUSEO DE TIZIMIN
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+    <style>
+        .hbtn {
+            position: relative;
+            box-sizing: border-box;
+            display: inline-block;
+            overflow: hidden;
+            padding: 8px 20px;
+            margin: 0px 3px 6px;
+            text-align: center;
+            border: 2px solid rgb(0, 0, 0);
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+
+        .hbtn i {
+            padding-right: 8px;
+        }
+
+
+        .hb-border-bottom-br3 {
+            position: relative;
+            transition-duration: 0.3s;
+            overflow: visible;
+            box-sizing: border-box;
+            border: none;
+            padding: 10px 22px;
+        }
+
+
+        .hb-border-bottom-br3::after {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            border: 2px solid rgb(0, 0, 0);
+            z-index: 2;
+            margin: 0px;
+            left: 0px;
+            bottom: 0px;
+            border-top-width: 2px;
+            transition: border-top-width 0.1s ease 0.2s, height 0.2s ease 0.1s, width 0.2s ease 0s, margin 0.2s ease 0s;
+        }
+
+
+        .hb-border-bottom-br3:hover::after {
+            width: 60%;
+            height: 0px;
+            border-width: 0px 2px 2px;
+            margin: 0px 20%;
+            transition: border-top-width 0.1s ease 0s, height 0.2s ease 0.1s, width 0.2s ease 0.2s, margin 0.2s ease 0.2s;
+        }
+
+
+        .hbor2 {
+            border-width: 2px;
+        }
+
+
+        .hbor2::before {
+            border-width: 2px !important;
+        }
+
+
+        .hpad2 {
+            padding: 12px 24px !important;
+        }
+    </style>
+
+
+
+
+    <footer class="footer">
+        <div class="container container-sm">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <div class="titulos" style="text-align: center;">
+                        <h3 translate="no">MUSEO DE TIZIMIN</h3>
+                        <h3 translate="no">SALON DE ARTE E HISTORIA</h3>
+                    </div>
+                    <div>
+                        <img src="img/logo-inferior-V-B.svg" width="70%" alt="Logo_inf">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="box">
+                        <h5>Horario</h5>
+                        <div>
+                            <p>Lunes a viernes:<br>
+                                <time>08:00</time> a.m. a <time>01:00</time>p.m.<br>
+                                <time>05:00 </time> p.m. a <time>07:00 </time>p.m.
+                            </p>
+                        </div>
+                        <div>
+                        </div>
+                        <p> Sabado: <br>
+                            <time> 08:00</time> a.m. a <time> 01:00</time> p.m.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="box">
+                        <h5>Información</h5>
+                        <div>
+                            <address>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</address>
+                            <p>Télefono: +52 (986) 866 7014</p>
+                        </div>
+                        <div class="red-social d-flex justify-content-stard">
+                            <a href="#"><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <hr>
+                <div class="container container-sm">
+                    <ul class="masinfo row justify-content-between">
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Contacto</a></li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Acerca de nosotros</a>
+                        </li>
+                        <li class="enlace col-sm-13 col-md-3"><a href="#" class="esylea-white">Terminos y
+                                condiciones</a></li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Preguntas frecuentes</a>
+                        </li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr>
+                <div class="col d-flex justify-content-center text-align-center">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                        Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                            style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+    band-content-lefth strong,
+.band-content-right strong {
+    font-size: .875rem;
+    font-family: var(--tipo-principal);
+}
+
+.contImagen {
+    margin: .625rem 0;
+}
+
+.custom-shape-image {
+    clip-path: circle(60% at center);
+}
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container container-sm">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <div class="titulos" style="text-align: center;">
+                        <h3 translate="no">MUSEO DE TIZIMIN</h3>
+                        <h3 translate="no">SALON DE ARTE E HISTORIA</h3>
+                    </div>
+                    <div>
+                        <img src="img/logo-inferior-V-B.svg" width="70%" alt="Logo_inf">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="box">
+                        <h5>Horario</h5>
+                        <div>
+                            <p>Lunes a viernes:<br>
+                                <time>08:00</time> a.m. a <time>01:00</time>p.m.<br>
+                                <time>05:00 </time> p.m. a <time>07:00 </time>p.m.
+                            </p>
+                        </div>
+                        <div>
+                        </div>
+                        <p> Sabado: <br>
+                            <time> 08:00</time> a.m. a <time> 01:00</time> p.m.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="box">
+                        <h5>Información</h5>
+                        <div>
+                            <address>C. 50 entre 51, 49 y 47 Col. Centro,<br> 97700, Tizimín, Yucatán</address>
+                            <p>Télefono: +52 (986) 866 7014</p>
+                        </div>
+                        <div class="red-social d-flex justify-content-stard">
+                            <a href="#"><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <hr>
+                <div class="container container-sm">
+                    <ul class="masinfo row justify-content-between">
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Contacto</a></li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Acerca de nosotros</a>
+                        </li>
+                        <li class="enlace col-sm-13 col-md-3"><a href="#" class="esylea-white">Terminos y
+                                condiciones</a></li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Preguntas frecuentes</a>
+                        </li>
+                        <li class="enlace col-sm-12 col-md-2"><a href="#" class="esylea-white">Créditos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr>
+                <div class="col d-flex justify-content-center text-align-center">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons
+                        Atribución-NoComercial-SinDerivadas 4.0 Internacional <img alt="Licencia Creative Commons"
+                            style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>.
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+
+      <div class='wrapper'>
+
+        <b:section class='contact-container' id='bsection-contact'>
+          <b:widget id='ContactForm1' locked='false' title='Contact Us' type='ContactForm' version='1'>
+            <b:includable id='main'>
+              <b:if cond='data:title != &quot;&quot;'>
+                <h2 class='title'>
+                  <data:title/>
+                </h2>
+              </b:if>
+              <div class='contact-form-widget'>
+                <div class='form'>
+                  <form name='contact-form'>
+
+                    <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' placeholder='Full Name' size='30' type='text' value=''/>
+
+                    <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' placeholder='Email' size='30' type='text' value=''/>
+
+                    <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' placeholder='Your Message' rows='5'/>
+                    <p/>
+                    <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
+                    <p/>
+                    <div style='text-align: center; max-width: 222px; width: 100%'>
+                      <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
+                      <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <b:include name='quickedit'/>
+            </b:includable>
+          </b:widget>
+        </b:section>
+
+      </div>
+
+    </b:if>
+
+    <!-- End of the contact section -->
+
+
+
+
+    https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDqPxelD9wPfVvzz9mgc-SUpmVId7LJPJMLbxa0n7ifxJgj4JHdExwcgG-dpzppigrnITn5qxabUY6HkaDhxB8cX0gB-F8LXHj8swu9m-hQRoYMSZDWQBb1vzsbY-uoJR9syW-Rd5V0oY9a85iKOQF1SCdfK2e9SIjMYZKUimOJ0O6i5KU711NRrjoGqU/s1600/Banner_color.jpg
+
+
+
+    /* Media query para dispositivos móviles */
+@media only screen and (max-width: 575.98px) {
+    .masinfo {
+        text-align: start;
+        justify-content: start;
+    }
+}
+
+
+/* Estilos para tablets */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .masinfo {
+        text-align: start;
+        justify-content: start;
+    }
+}
